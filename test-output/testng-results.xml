@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="56091" started-at="2019-02-11T20:31:32Z" finished-at="2019-02-11T20:32:28Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="56091" started-at="2019-02-11T20:31:32Z" finished-at="2019-02-11T20:32:28Z">
+      <class name="veris_sandbox.Logout">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:veris_sandbox.Logout@39aeed2f]" name="initialize" is-config="true" duration-ms="16929" started-at="2019-02-11T20:31:32Z" finished-at="2019-02-11T20:31:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:veris_sandbox.Logout@39aeed2f]" name="Login" duration-ms="24459" started-at="2019-02-11T20:31:49Z" finished-at="2019-02-11T20:32:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:veris_sandbox.Logout@39aeed2f]" name="Logout" duration-ms="14635" started-at="2019-02-11T20:32:13Z" description="Logout Button Testing" depends-on-methods="veris_sandbox.Logout.Login" finished-at="2019-02-11T20:32:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+      </class> <!-- veris_sandbox.Logout -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
