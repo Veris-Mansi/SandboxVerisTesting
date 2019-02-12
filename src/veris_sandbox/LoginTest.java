@@ -84,7 +84,7 @@ public class LoginTest {
 	@Test(priority=5,description="valid credentials login",dependsOnMethods="forgotPassword")
 	public void CorrectLogin() throws InterruptedException
 	{
-		Resource.ValidLogin(driver, element, "mansi.sahu@veris.in", "Veris@12345");
+		Resource.ValidLogin(driver, element, "zinijecahi@getcoolmail.info", "Veris@12345");
 		String actual_title=driver.getTitle();
 		String expected_title="Veris View | Setup Organization";
 		Assert.assertEquals(actual_title, expected_title);

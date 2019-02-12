@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="56091" started-at="2019-02-11T20:31:32Z" finished-at="2019-02-11T20:32:28Z">
+  <suite name="Default suite" duration-ms="52150" started-at="2019-02-12T13:47:32Z" finished-at="2019-02-12T13:48:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="56091" started-at="2019-02-11T20:31:32Z" finished-at="2019-02-11T20:32:28Z">
-      <class name="veris_sandbox.Logout">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:veris_sandbox.Logout@39aeed2f]" name="initialize" is-config="true" duration-ms="16929" started-at="2019-02-11T20:31:32Z" finished-at="2019-02-11T20:31:49Z">
+    <test name="Default test" duration-ms="52150" started-at="2019-02-12T13:47:32Z" finished-at="2019-02-12T13:48:24Z">
+      <class name="veris_sandbox.AddingBulkMembers">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:veris_sandbox.AddingBulkMembers@39aeed2f]" name="initialize" is-config="true" duration-ms="9556" started-at="2019-02-12T13:47:32Z" finished-at="2019-02-12T13:47:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:veris_sandbox.Logout@39aeed2f]" name="Login" duration-ms="24459" started-at="2019-02-11T20:31:49Z" finished-at="2019-02-11T20:32:13Z">
+        <test-method status="PASS" signature="Login()[pri:1, instance:veris_sandbox.AddingBulkMembers@39aeed2f]" name="Login" duration-ms="24771" started-at="2019-02-12T13:47:41Z" finished-at="2019-02-12T13:48:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="Logout()[pri:0, instance:veris_sandbox.Logout@39aeed2f]" name="Logout" duration-ms="14635" started-at="2019-02-11T20:32:13Z" description="Logout Button Testing" depends-on-methods="veris_sandbox.Logout.Login" finished-at="2019-02-11T20:32:28Z">
+        <test-method status="PASS" signature="OpeningMemberBook()[pri:2, instance:veris_sandbox.AddingBulkMembers@39aeed2f]" name="OpeningMemberBook" duration-ms="9941" started-at="2019-02-12T13:48:06Z" description="Opening Member Book page" depends-on-methods="veris_sandbox.AddingBulkMembers.Login" finished-at="2019-02-12T13:48:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Logout -->
-      </class> <!-- veris_sandbox.Logout -->
+        </test-method> <!-- OpeningMemberBook -->
+        <test-method status="PASS" signature="addBulkMembers()[pri:3, instance:veris_sandbox.AddingBulkMembers@39aeed2f]" name="addBulkMembers" duration-ms="7820" started-at="2019-02-12T13:48:16Z" depends-on-methods="veris_sandbox.AddingBulkMembers.OpeningMemberBook" finished-at="2019-02-12T13:48:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBulkMembers -->
+      </class> <!-- veris_sandbox.AddingBulkMembers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

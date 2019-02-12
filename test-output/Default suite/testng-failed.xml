@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="veris_sandbox.Logout">
+      <class name="veris_sandbox.AddingBulkMembers">
         <methods>
+          <include name="addBulkMembers"/>
+          <include name="OpeningMemberBook"/>
           <include name="Login"/>
           <include name="initialize"/>
-          <include name="Logout"/>
         </methods>
-      </class> <!-- veris_sandbox.Logout -->
+      </class> <!-- veris_sandbox.AddingBulkMembers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,5 +1,7 @@
 package veris_sandbox;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import veris_initialize.Resource;
+
 public class OrganizationTesting {
 	WebDriver driver;
 	WebElement element;
@@ -15,7 +19,7 @@ public class OrganizationTesting {
 	public void initialize()
 	{
 		System.setProperty("webdriver.chrome.driver","D:\\Selenium_Projects\\chromedriver.exe");
-        driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.get("https://sandbox.veris.in/vms/login/");
 		driver.manage().window().maximize();
 
@@ -23,15 +27,7 @@ public class OrganizationTesting {
 	@Test
 	public void ValidLogin() throws InterruptedException
 	{
-		element=driver.findElement(By.xpath("/html/body/div/div/div[2]/form/div[1]/div/input"));
-		element.clear();
-		element.sendKeys("mansi.sahu@veris.in");
-		element=driver.findElement(By.xpath("/html/body/div/div/div[2]/form/div[2]/div/input"));
-		element.clear();
-		element.sendKeys("Veris@12345");
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//*[@id=\"submit-button\"]/button")).click();
-		Thread.sleep(8000);
+		Resource.ValidLogin(driver, element, "zinijecahi@getcoolmail.info", "Veris@12345");
 		driver.navigate().refresh();
 		String actual_title=driver.getTitle();
 		String expected_title="Veris View | Setup Organization";
@@ -70,7 +66,7 @@ public class OrganizationTesting {
 	{
 		driver.findElement(By.name("name")).sendKeys("Veris");
 		Thread.sleep(2000);
-		
+
 		driver.findElement(By.xpath("//*[@id=\"description\"]")).sendKeys("");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id=\"newOrgForm\"]/div[5]/button[1]")).click();
@@ -86,7 +82,7 @@ public class OrganizationTesting {
 	{
 		driver.findElement(By.name("name")).sendKeys("Veris");
 		Thread.sleep(2000);
-		
+
 		driver.findElement(By.xpath("//*[@id=\"description\"]")).sendKeys("hello");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id=\"newOrgForm\"]/div[5]/button[1]")).click();
@@ -97,28 +93,24 @@ public class OrganizationTesting {
 		driver.navigate().refresh();
 		Thread.sleep(2000);
 	}
-	
+
 	@Test(dependsOnMethods="emptyImage")
 	public void correctCredentials() throws InterruptedException
 	{
 		driver.findElement(By.name("name")).sendKeys("Veris_Digicred");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id=\"description\"]")).sendKeys("Creates Visitor management System");
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@id=\"org_logo\"]")).sendKeys("D:\\organization.jpg");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"address\"]")).sendKeys("Sector 48, Gurugram");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"newOrgForm\"]/div[4]/div/div[1]/input[2]")).sendKeys("Gurgaon");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"newOrgForm\"]/div[4]/div/div[1]/input[3]")).sendKeys("122001");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"newOrgForm\"]/div[4]/div/div[1]/input[4]")).sendKeys("Haryana");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"newOrgForm\"]/div[4]/div/div[1]/input[5]")).sendKeys("India");
-		Thread.sleep(2000);
+		driver.findElement(By.xpath(".//*[@id='address']")).sendKeys("Vatika bussiness Park");//Address
+		driver.findElement(By.xpath(".//*[@id='newOrgForm']/div[4]/div/div[1]/input[2]")).sendKeys("Gurgaon");//City
+		driver.findElement(By.xpath(".//*[@id='newOrgForm']/div[4]/div/div[1]/input[3]")).sendKeys("122018");//Postal
+		driver.findElement(By.xpath(".//*[@id='newOrgForm']/div[4]/div/div[1]/input[4]")).sendKeys("Haryana");//State
+		driver.findElement(By.xpath(".//*[@id='newOrgForm']/div[4]/div/div[1]/input[5]")).sendKeys("India");//Country
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//Wait for 10 sec
 		driver.findElement(By.xpath("//*[@id=\"newOrgForm\"]/div[5]/button[1]")).click();
 		System.out.println("Button clicked");
 		Thread.sleep(2000);
+		
 	}
 }

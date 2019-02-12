@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\DELL1\AppData\Local\Temp\testng-eclipse--1777020689\testng-customsuite.xml</span>
+                    <span>C:\Users\DELL1\AppData\Local\Temp\testng-eclipse--549640528\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="veris_sandbox.Logout" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="veris_sandbox.AddingBulkMembers" hash-for-method="Login">Login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="veris_sandbox.Logout" hash-for-method="Logout">Logout</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="veris_sandbox.AddingBulkMembers" hash-for-method="OpeningMemberBook">OpeningMemberBook</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="veris_sandbox.AddingBulkMembers" hash-for-method="addBulkMembers">addBulkMembers</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,7 +130,7 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">veris_sandbox.Logout</span>
+              <span class="class-name">veris_sandbox.AddingBulkMembers</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -137,11 +142,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="Logout">
-                  </a> <!-- Logout -->
-                  <span class="method-name">Logout</span>
+                  <a name="OpeningMemberBook">
+                  </a> <!-- OpeningMemberBook -->
+                  <span class="method-name">OpeningMemberBook</span>
                   <em>
-(Logout Button Testing)                  </em>
+(Opening Member Book page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addBulkMembers">
+                  </a> <!-- addBulkMembers -->
+                  <span class="method-name">addBulkMembers</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +161,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL1\AppData\Local\Temp\testng-eclipse--1777020689\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\DELL1\AppData\Local\Temp\testng-eclipse--549640528\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,7 +170,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;veris_sandbox.Logout&quot;/&gt;
+      &lt;class name=&quot;veris_sandbox.AddingBulkMembers&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -198,20 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Login')
-data.setCell(0, 2, 'veris_sandbox.Logout')
-data.setCell(0, 3, 24459);
+data.setCell(0, 2, 'veris_sandbox.AddingBulkMembers')
+data.setCell(0, 3, 24771);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Logout')
-data.setCell(1, 2, 'veris_sandbox.Logout')
-data.setCell(1, 3, 14635);
+data.setCell(1, 1, 'OpeningMemberBook')
+data.setCell(1, 2, 'veris_sandbox.AddingBulkMembers')
+data.setCell(1, 3, 9941);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addBulkMembers')
+data.setCell(2, 2, 'veris_sandbox.AddingBulkMembers')
+data.setCell(2, 3, 7820);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -237,18 +253,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">veris_sandbox.Logout</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">veris_sandbox.AddingBulkMembers</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">Login</span>
-                <span class="method-start">16973 ms</span>
+                <span class="method-start">9592 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">Logout</span>
-                <span class="method-start">41452 ms</span>
+                <span class="method-name">OpeningMemberBook</span>
+                <span class="method-start">34379 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addBulkMembers</span>
+                <span class="method-start">44326 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
